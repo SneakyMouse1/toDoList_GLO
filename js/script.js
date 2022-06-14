@@ -3,12 +3,12 @@ const headerInput = document.querySelector('.header-input');
 const todoList = document.querySelector('.todo-list');
 const todoCompleted = document.querySelector('.todo-completed');
 
-const toDoData = localStorage.getItem('toDo') ? JSON.parse(localStorage.getItem('toDo')) : [];
+const toDoData = localStorage.getItem('toDoData') ? JSON.parse(localStorage.getItem('toDoData')) : [];
 
 const render = function () {
     todoList.innerHTML = '';
     todoCompleted.innerHTML = '';
-    localStorage.setItem('toDo', JSON.stringify(toDoData));
+    localStorage.setItem('toDoData', JSON.stringify(toDoData));
 
     toDoData.forEach(function (item, index) {
         const li = document.createElement('li');
